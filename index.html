@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Friv</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="logo">GABI</div>
+      <div>
+        <h1>Passe o Tempo</h1>
+        <p>Escolha um jogo e divirta-se</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <input id="search" type="search" placeholder="Buscar jogo..." autocomplete="off">
+      <button id="homeBtn" class="btn ghost" title="Voltar pro menu">Menu</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- GRID (menu) -->
+    <section id="grid" class="grid"></section>
+
+    <!-- PLAYER (abre o jogo) -->
+    <section id="player" class="player hidden">
+      <div class="player-top">
+        <div class="player-title">
+          <span id="badge" class="badge">Jogo</span>
+          <h2 id="gameTitle">Título</h2>
+        </div>
+
+        <div class="player-controls">
+          <button id="resetBtn" class="btn">Reiniciar</button>
+          <button id="closeBtn" class="btn ghost">Fechar</button>
+        </div>
+      </div>
+
+      <div class="canvas-area">
+        <canvas id="canvas" width="900" height="520"></canvas>
+
+        <aside class="side">
+          <h3>Como jogar</h3>
+          <p id="howto">...</p>
+          <div class="stat">
+            <span>Placar</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat">
+            <span>Recorde (local)</span>
+            <strong id="best">0</strong>
+          </div>
+          <small class="hint">Dica: use teclado / mouse conforme o jogo.</small>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <small>Mini Friv — feito em HTML/CSS/JS • offline Por Gabriel Menezes Rehbein</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
